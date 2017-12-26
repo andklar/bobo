@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  resources :seasons
-  root 'beers#index'
+  root 'seasons#index'
   
-  resources :beers
+  resources :seasons do
+  	resources :beers
+  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

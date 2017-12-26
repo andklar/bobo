@@ -4,12 +4,14 @@ class SeasonsController < ApplicationController
   # GET /seasons
   # GET /seasons.json
   def index
-    @seasons = Season.all
+    @seasons = Season.all.order(id: :desc)
   end
 
   # GET /seasons/1
   # GET /seasons/1.json
   def show
+    @season = Season.find(params[:id])
+    @beers = @season.beers
   end
 
   # GET /seasons/new

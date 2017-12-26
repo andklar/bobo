@@ -5,10 +5,10 @@ class BeersController < ApplicationController
   # GET /beers.json
   def index
     @beers = Beer.all
-    @summer_beers = Beer.where( 'season' == 'summer')
-    @winter_beers = Beer.where( 'season' == 'winter')
-    @fall_beers = Beer.where( 'season' == 'fall')
-    @spring_beers = Beer.where('season' == 'spring')
+    # @summer_beers = @beer.season == 'summer'
+    # @winter_beers = Beer.where( 'season' == 'winter')
+    # @fall_beers = Beer.where( 'season' == 'fall')
+    # @spring_beers = Beer.where('season' == 'spring')
   end
 
   # GET /beers/1
