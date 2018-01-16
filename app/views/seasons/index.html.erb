@@ -1,18 +1,32 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Seasons Greetings!</h1>
+<div class='bo-logo'><%= image_tag "bobo-logo.png" %></div>
 
 <head>
-  <% @seasons.each do |season| %>
-    <th colspan="3"><%= season.name %></th>
-  <% end %>
+  <div class='seasons-container'>
+    <ul class='seasons'>
+      <li id='winter'><a href="#Winter"></a><%= image_tag "winter-icon.svg" %></li>
+      <li id='fall'><a href="#Fall"></a><%= image_tag "fall-icon.svg" %></li>
+      <li id='summer'><a href="#Summer"></a><%= image_tag "summer-icon.svg" %></li>
+      <li id='spring'><a href="#Spring"></a><%= image_tag "spring-icon.svg" %></li>
+    </ul>
+  </div>
 </head>
 
-<% @seasons.each do |season| %>
-  <% season.name %>
-  <%= season.beers.each do |beer| %>
-    <% beer.name %>
+<body>
+  <% @seasons.each do |season| %> <br>__________________________________<br><br>
+    <div class='season-beers'>
+      <h1><a name="<%= season.name %>"><%= season.name %></a></h1>
+      <% season.beers.each do |beer| %>
+        <div class='beers'>
+          <%= beer.name %>
+          <br>
+          <%= beer.description %>
+          <br>
+          <button id='lcbo-availability'><%= beer.product_id %></button>
+        </div>
+        <br>
+      <% end %>
+    </div>
   <% end %>
-<% end %>
+</body>
 
 <br>

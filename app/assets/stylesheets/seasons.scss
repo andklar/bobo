@@ -1,3 +1,64 @@
 // Place all the styles related to the Seasons controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.bo-logo img {
+	width: 75px;
+	height: 45px;
+	padding-left: 15px;
+	padding-bottom: 8px; 
+}
+
+.seasons-container {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 35%;
+    overflow: hidden;
+}
+
+.seasons {
+	list-style-type: none;
+	margin: 0;
+	margin-left: -10px;
+	margin-right: -10px;
+	padding: 0;
+	overflow: hidden;
+	text-align: center;
+}
+
+.seasons li {
+	display: inline-block;
+	width: 26%;
+	padding-top: 25%;
+	padding-bottom: 35%;
+	margin-left: -1%;
+	margin-right: -1%;
+}
+
+.seasons li img {
+	height: 80px;
+	width: 80px;
+}
+
+.seasons li button {
+	background-color: transparent;
+	outline: none;
+	border: none;
+}
+
+#winter {
+	background-color: #A4BABA;
+}
+
+#spring {
+	background-color: #512B1B;
+}
+
+#summer {
+	background-color: #F4DEBD;
+}
+
+#fall {
+	background-color: #C4A077;
+}
+

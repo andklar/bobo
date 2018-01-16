@@ -7,7 +7,8 @@ end
 
 #######
 gem 'rest-client'
-
+gem 'httparty'
+# gem 'pp'
 #######
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

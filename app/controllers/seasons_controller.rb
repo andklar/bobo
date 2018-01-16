@@ -5,6 +5,8 @@ class SeasonsController < ApplicationController
   # GET /seasons.json
   def index
     @seasons = Season.all.order(id: :desc)
+    @winter = Season.where('id = 4')
+    @summer =  Season.where('id = 2')
   end
 
   # GET /seasons/1
